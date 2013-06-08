@@ -25,35 +25,18 @@
     		<h2> List of Mails </h2>
 
 	      <!--Body content-->
-	      <ul class="thumbnails mails">
+	      <ul class="thumbnails">
 	        <li ng-repeat="mail in mails" class="span4">
-	          <div class="thumbnails">
-	          	<a href="#/phones/{{mail.id}}" class="thumb"><img ng-src="{{mail.thumbnail}}"></a>
+	          <div class="thumbnail">
+	          	<a href="#/phones/{{mail.id}}" class=""><img ng-src="{{mail.thumbnail}}"></a>
 	          	<div class="caption">
 	          		<h3><a href="#/phones/{{mail.id}}">{{mail.title}}</a></h3>
 	          		<p>{{mail.snippet}}</p>
+	          	</div> 
 	          </div>
 	        </li>
 	      </ul>
-
-<!-- 
-      <ul>
-      	<li>mail 1</li>
-      	<li>mail 2</li>
-      	<li>mail 3</li>
-      	<li>mail 4</li>
-      	<li>mail 5</li>
-      	<li>mail 6</li>
-      </ul>
- -->
-<!--       <ul class="phones">
-        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
-          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
-          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul> -->
-
-    </div>
-  </div>
-</div>
+      </div> <!-- end of row-fluid-->]
+    </div> <!-- end of span9 -->
+  </div> <!-- end of row-fluid -->
+</div> <!-- end of container-fluid -->
