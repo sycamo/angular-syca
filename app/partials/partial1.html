@@ -1,1 +1,59 @@
-<p>This is the partial for view 1.</p>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <!--Sidebar content-->
+
+      Search: <input id="query" type="text"> <br>
+      Sort by:
+      <select>
+      	<option value="A">A</option>
+      	<option value="B">B</option>
+      	<option value="C">C</option>
+      </select>
+
+
+<!--       Search: <input ng-model="query">
+      Sort by:
+      <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select> -->
+
+    </div>
+    <div class="span9">
+    	<div class="row-fluid">
+    		<h2> List of Mails </h2>
+
+	      <!--Body content-->
+	      <ul class="thumbnails mails">
+	        <li ng-repeat="mail in mails" class="span4">
+	          <div class="thumbnails">
+	          	<a href="#/phones/{{mail.id}}" class="thumb"><img ng-src="{{mail.thumbnail}}"></a>
+	          	<div class="caption">
+	          		<h3><a href="#/phones/{{mail.id}}">{{mail.title}}</a></h3>
+	          		<p>{{mail.snippet}}</p>
+	          </div>
+	        </li>
+	      </ul>
+
+<!-- 
+      <ul>
+      	<li>mail 1</li>
+      	<li>mail 2</li>
+      	<li>mail 3</li>
+      	<li>mail 4</li>
+      	<li>mail 5</li>
+      	<li>mail 6</li>
+      </ul>
+ -->
+<!--       <ul class="phones">
+        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul> -->
+
+    </div>
+  </div>
+</div>
