@@ -1,5 +1,46 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+		  <!--Sidebar content-->
+
+		  Search: <input id="query" type="text"> <br>
+		  Sort by:
+		  <select>
+		  	<option value="A">A</option>
+		  	<option value="B">B</option>
+		  	<option value="C">C</option>
+		  </select>
+		</div>
+
+		<div class="span9">
+
+
+			<div class="datetime">
+				<time datetime="2013-06-07">Friday, Jun 07</time>
+			</div>
+			<article class="mailDetail">
+				<figure>
+					<img ng-src="{{mainImageUrl}}">
+				</figure>
+				<div class="mail-thumbs">
+					<ul class="mail-slides">
+						<li ng-repeat="img in mail.gallery">
+							<img ng-src="{{img}}">
+						</li>
+					</ul>
+				</div>
+
+				<p>This is the partial for view 2.</p>
+				<p>
+				  Showing of 'interpolate' filter.
+				</p>
+			</article>
+
+
+
+
+  	</div>
+  </div>
+</div>
+
+

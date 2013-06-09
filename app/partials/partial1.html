@@ -28,10 +28,10 @@
 	      <ul class="thumbnails">
 	        <li ng-repeat="mail in mails" class="span4">
 	          <div class="thumbnail">
-	          	<a href="#/phones/{{mail.id}}" class=""><img ng-src="{{mail.thumbnail}}"></a>
+	          	<a href="#/phones/{{mail.filename}}" class=""><img ng-src="{{mail.thumbnail}}"></a>
 	          	<div class="caption">
                 <span class="badge badge-info">{{mail.senderName}}</span>
-	          		<h3><a href="#/phones/{{mail.id}}">{{mail.title}}</a></h3>
+	          		<h3><a href="#/mails/{{mail.filename}}">{{mail.title}}</a></h3>
 	          		<p>{{mail.snippet}}</p>
 	          	</div> 
 	          </div>

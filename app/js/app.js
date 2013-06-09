@@ -11,12 +11,20 @@
 
 /* App Module */
 
-angular.module('myApp', []).
+// angular.module('myApp', []).
+//   config(['$routeProvider', function($routeProvider) {
+//   $routeProvider.
+//       when('/mails', {templateUrl: 'partials/partial1.html', controller: 'MailListCtrl'}).
+//       when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'}).
+//       otherwise({redirectTo: '/mails'});
+// }]);
+
+
+angular.module('sycamo', ['sycamoFilters', 'sycamoServices']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/mails', {templateUrl: 'partials/partial1.html', controller: 'MailListCtrl'}).
-      when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'}).
+      when('/mails', {templateUrl: 'partials/partial1.html', controller: MailListCtrl}).
+      when('/mails/:mailId', {templateUrl: 'partials/partial2.html', controller: MailDetailCtrl}).
       otherwise({redirectTo: '/mails'});
 }]);
-
 

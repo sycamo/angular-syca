@@ -53,6 +53,49 @@ body {
   width: 100px;
 }
 
+.datetime {
+  display: block;
+  background: black;
+  color: white;
+  clear: both;
+  margin: 0;
+  padding: 6px 2px;
+  text-transform: uppercase;
+
+}
+
+.mailDetail figure{
+  max-height: 374px;
+  /*background: url('{{mainImageUrl}}') no-repeat;*/
+  background: url('../mails/thumbnail/mail-001.jpg') no-repeat;
+  background-size: cover;
+}
+
+.mailDetail figure img{
+  max-height: 374px;
+  width: 100%;
+  visibility: hidden;
+}
+
+ul.mail-slides {
+  list-style: none;
+}
+
+ul.mail-slides li {
+  border: 5px solid white;
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+
+}
+
+ul.mail-slides li img{
+  max-width: 100%;
+}
+
+
+
+
 h1 {
   border-bottom: 1px solid gray;
 }

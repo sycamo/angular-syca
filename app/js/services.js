@@ -3,8 +3,11 @@
 /* Services */
 
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
-angular.module('myApp.services', []).
-  value('version', '0.1');
+// Based on phonecat tutorial
 
+angular.module('sycamoServices', ['ngResource']).
+  factory('Mail', function($resource){
+  	return $resource('mails/:mailId.json', {}, {
+  		query: {method:'GET', params:{mailId:'mails'}, isArray:true}
+  	});
+  });
