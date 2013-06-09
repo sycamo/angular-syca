@@ -3,21 +3,13 @@
     <div class="span3">
       <!--Sidebar content-->
 
-      Search: <input id="query" type="text"> <br>
-      Sort by:
-      <select>
-      	<option value="A">A</option>
-      	<option value="B">B</option>
-      	<option value="C">C</option>
-      </select>
-
-
-<!--       Search: <input ng-model="query">
+      Search: <input ng-model="query"> <br>
       Sort by:
       <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select> -->
+      	<option value="dateReceived">Oldest</option>
+      	<option value="senderName">Sender Name</option>
+      	<option value="title">Subject Line</option>
+      </select>
 
     </div>
     <div class="span9">
@@ -26,7 +18,7 @@
 
 	      <!--Body content-->
 	      <ul class="thumbnails">
-	        <li ng-repeat="mail in mails" class="span4">
+	        <li ng-repeat="mail in mails | filter:query | orderBy: orderProp" class="span4">
 	          <div class="thumbnail">
 	          	<a href="#/phones/{{mail.filename}}" class=""><img ng-src="{{mail.thumbnail}}"></a>
 	          	<div class="caption">
