@@ -324,6 +324,11 @@ a:hover {
   margin-left: 0;
 }
 
+/*slight modification for 3-column layout*/
+.row-fluid [class*="span"]:nth-child(4n) {
+  margin-left: 0;
+}
+
 .row-fluid .span12 {
   width: 99.99999998999999%;
   *width: 99.94680850063828%;

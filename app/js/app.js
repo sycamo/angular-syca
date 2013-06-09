@@ -18,3 +18,5 @@ angular.module('myApp', []).
       when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'}).
       otherwise({redirectTo: '/mails'});
 }]);
+
+
