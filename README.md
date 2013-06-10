@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # angular-seed — the seed for AngularJS apps
 
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
@@ -149,3 +150,9 @@ fetch the changes and merge them into your project with git.
 ## Contact
 
 For more information on AngularJS please check out http://angularjs.org/
+=======
+angular-syca
+============
+
+Experiment with AngularJS based on angular-phonecat tutorial
+>>>>>>> 6460a43d1b5f744243d9728b5e13f799f1e4f821
