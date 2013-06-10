@@ -25,6 +25,7 @@
                 <span class="badge badge-info">{{mail.senderName}}</span>
 	          		<h3><a href="#/mails/{{mail.filename}}">{{mail.title}}</a></h3>
 	          		<p>{{mail.snippet}}</p>
+                <p>Date: {{mail.dateReceived*1000 | date:'medium'}} </p>
 	          	</div> 
 	          </div>
 	        </li>
