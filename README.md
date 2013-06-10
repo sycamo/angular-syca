@@ -1,4 +1,4 @@
 angular-syca
 ============
 
-Experiment with AngularJS
+Experiment with AngularJS based on angular-phonecat tutorial
