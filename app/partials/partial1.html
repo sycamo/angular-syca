@@ -1,9 +1,42 @@
-<div class="container-fluid">
+
+<div id="cover-page" class="container-fluid">
   <div class="row-fluid">
-    <div class="span3">
+    <!-- <div class="cover-container span12"> -->
+    <div ng-class="{true:'cover-container', false:'small-container'}[$first]" class="span12" ng-repeat="mail in mails">
+      <figure>
+        <div ng-class="{true:'span12', false:'span4'}[$first]">
+          <img src="{{mail.thumbnail}}">
+        </div>
+        <div ng-class="{true:'span12', false:'span8'}[$first]">
+          <figcaption>
+            <span class="label">COVER</span>
+            <h1>{{mail.title}}</h1>
+            <h3>{{mail.snippet}}</h3>
+          </figcaption>
+        </div>
+      </figure>
+
+
+    </div> 
+    <!-- end of ng-repeat -->
+
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3"> -->
+
+
       <!--Sidebar content-->
 
-      Search: <input ng-model="query"> <br>
+<!--       Search: <input ng-model="query"> <br>
       Sort by:
       <select ng-model="orderProp">
       	<option value="dateReceived">Oldest</option>
@@ -14,10 +47,10 @@
     </div>
     <div class="span9">
     	<div class="row-fluid">
-    		<h2> List of Mails </h2>
+    		<h2> List of Mails </h2> -->
 
 	      <!--Body content-->
-	      <ul class="thumbnails">
+<!-- 	      <ul class="thumbnails">
 	        <li ng-repeat="mail in mails | filter:query | orderBy: orderProp" class="span4">
 	          <div class="thumbnail">
 	          	<a href="#/phones/{{mail.filename}}" class=""><img ng-src="{{mail.thumbnail}}"></a>
@@ -29,8 +62,8 @@
 	          	</div> 
 	          </div>
 	        </li>
-	      </ul>
-      </div> <!-- end of row-fluid-->
-    </div> <!-- end of span9 -->
-  </div> <!-- end of row-fluid -->
-</div> <!-- end of container-fluid -->
+	      </ul> -->
+      <!-- </div>  --><!-- end of row-fluid-->
+    <!-- </div> --> <!-- end of span9 -->
+  <!-- </div>  --><!-- end of row-fluid -->
+<!-- </div> --> <!-- end of container-fluid -->
