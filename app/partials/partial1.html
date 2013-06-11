@@ -4,10 +4,10 @@
     <!-- <div class="cover-container span12"> -->
     <div ng-class="{true:'cover-container', false:'small-container'}[$first]" class="span12" ng-repeat="mail in mails">
       <figure>
-        <div ng-class="{true:'span12', false:'span4'}[$first]">
+        <div ng-class="{true:'', false:'span4'}[$first]">
           <img src="{{mail.thumbnail}}">
         </div>
-        <div ng-class="{true:'span12', false:'span8'}[$first]">
+        <div ng-class="{true:'', false:'span8'}[$first]">
           <figcaption>
             <span class="label">COVER</span>
             <h1>{{mail.title}}</h1>
