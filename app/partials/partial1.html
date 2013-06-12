@@ -11,7 +11,7 @@
           <figcaption>
             <span class="label">COVER</span>
             <h1>{{mail.title}}</h1>
-            <h3>{{mail.snippet}}</h3>
+            <h3>{{mail.snippet | truncate}}</h3>
             <h3>{{mail.read | checkmark}}</h3>
           </figcaption>
         </div>
