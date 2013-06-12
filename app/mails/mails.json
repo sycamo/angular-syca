@@ -7,7 +7,8 @@
 		"thumbnail": "mails/thumbnail/mail-001.jpg",
 		"dateReceived": 1370649593,
 		"senderName": "SONY HK",
-		"senderEmail": "mysony@sony.com.hk"
+		"senderEmail": "mysony@sony.com.hk",
+		"read": false
 	},
 	{
 		"id": "mail-002",
@@ -17,7 +18,8 @@
 		"thumbnail": "mails/thumbnail/mail-002.jpg",
 		"dateReceived": 1370480393,
 		"senderName": "NOT JUST A LABEL | Newsletter",
-		"senderEmail": "newsletter@notjustalabel.com"
+		"senderEmail": "newsletter@notjustalabel.com",
+		"read": false
 	},	
 	{
 		"id": "mail-003",
@@ -28,7 +30,8 @@
 		"dateReceived": 1370383553,
 		"senderName": "Listrak",
 		"senderEmail": "marketing@listrak.com",
-		"CTA": "Register Now >"
+		"CTA": "Register Now >",
+		"read": false
 	},
 	{
 		"id": "mail-004",
@@ -39,7 +42,8 @@
 		"dateReceived": 1370368702,
 		"senderName": "LinkedIn Today",
 		"senderEmail": "news@linkedin.com",
-		"CTA": "See More"
+		"CTA": "See More",
+		"read": false
 	},
 	{
 		"id": "mail-005",
@@ -50,7 +54,8 @@
 		"dateReceived": 1370323253,
 		"senderName": "Listrak",
 		"senderEmail": "marketing@listrak.com",
-		"CTA": "Register Now >"
+		"CTA": "Register Now >",
+		"read": true
 	},
 	{
 		"id": "mail-006",
@@ -61,7 +66,8 @@
 		"dateReceived": 1370018402,
 		"senderName": "LinkedIn Today",
 		"senderEmail": "news@linkedin.com",
-		"CTA": "See More"
+		"CTA": "See More",
+		"read": true
 	}
 
 

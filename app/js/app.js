@@ -20,7 +20,7 @@
 // }]);
 
 
-angular.module('sycamo', ['sycamoFilters', 'sycamoServices']).
+angular.module('sycamo', ['myFilters', 'sycamoServices']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
       when('/mails', {templateUrl: 'partials/partial1.html', controller: MailListCtrl}).
