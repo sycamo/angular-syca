@@ -25,6 +25,9 @@
 
   <!-- Include scripts -->
   <script src="lib/util/modernizr-2.6.2.min.js" type="text/javascript"></script>
+  <script src="lib/util/jquery.js" type="text/javascript"></script>
+  <script src="lib/util/jquery.resizecrop-1.0.3.js" type="text/javascript"></script>
+
   <script src="lib/util/less.js" type="text/javascript"></script>
   <script type="text/javascript">less.watch();</script>
 </head>
@@ -74,7 +77,23 @@
 
   <div ng-view class="main-view"></div>
 
+
   <div>Angular seed app: v<span app-version></span></div>
+
+
+
+  <script>
+
+    console.log("##########");
+
+    $(document).ready(function() {
+      console.log($('.prime'));
+    });
+
+
+
+  </script>
+
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
@@ -86,5 +105,9 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+   
+  <script src="js/resizeImg.js"></script>
+ 
+
 </body>
 </html>

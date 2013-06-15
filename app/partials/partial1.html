@@ -5,30 +5,30 @@
     <div ng-class="{true:'cover-container', false:'small-container'}[$first]" class="span12" ng-repeat="mail in mails">
       <figure>
         <div ng-class="{true:'', false:'span4'}[$first]">
-          <img src="{{mail.thumbnail}}">
+          <img ng-class="{true:'prime', false:''}[$first]"src="{{mail.thumbnail}}" resize-img>
         </div>
         <div ng-class="{true:'', false:'span8'}[$first]">
           <figcaption>
             <span class="label">COVER</span>
-            <h1>{{mail.title}}</h1>
+            <h1>{{mail.title | truncate:70}}</h1>
             <h3>{{mail.snippet | truncate}}</h3>
-            <h3>{{mail.read | checkmark}}</h3>
+            <!-- <h3>{{mail.read | checkmark}}</h3> -->
           </figcaption>
         </div>
       </figure>
-
-
     </div> 
     <!-- end of ng-repeat -->
 
+
   </div>
 
+  <!-- <div>
+    <img id="testImg" src ="mails/thumbnail/mail-001.jpg" my-border>
+  </div> -->
+
+
+
 </div>
-
-
-
-
-
 
 <!-- <div class="container-fluid">
   <div class="row-fluid">

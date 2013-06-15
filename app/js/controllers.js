@@ -6,6 +6,29 @@
 function MailListCtrl($scope, Mail) {
 	$scope.mails = Mail.query();
   $scope.orderProp = '-dateReceived';
+
+
+  $scope.$on('$viewContentLoaded', function(){
+
+  // 		var contentBlocks = $('#cover-page>div.row-fluid>div.cover-container>figure>div.prime');
+
+  // 		var test = angular.element('#cover-page').addClass('dumb');
+  // 		var testBool = test.hasClass('dumb');
+
+			// console.log(contentBlocks); // this is different from what i saw from chrome console
+			console.log("ContentLoaded");
+      console.log($('.prime'));
+
+      var fullwidth = $(window).width();
+
+			// $('.prime').resizecrop({
+			// 	width:fullwidth,
+			// 	height:100,
+			// 	vertical:"top"
+			// });
+
+  });
+
 }
 
 //MailListCtrl.$inject = ['$scope', 'Mail'];

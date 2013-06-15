@@ -38,21 +38,3 @@ angular.module('myFilters', []).
 
 	});
 
-// angular.module('myFilters2', []).
-// 	filter('truncate', function() {
-// 		return function (text, limit, end) {
-// 	        if (isNaN(limit))
-// 	            limit = 140;
-
-// 	        if (end === undefined)
-// 	            end = "...";
-
-// 	        if (text.length <= limit || text.length - end.length <= limit) {
-// 	            return text;
-// 	        }
-// 	        else {
-// 	            return String(text).substring(0, limit-end.length) + end;
-// 	        }
-
-// 	    };
-// });

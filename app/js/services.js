@@ -5,9 +5,10 @@
 
 // Based on phonecat tutorial
 
-angular.module('sycamoServices', ['ngResource']).
-  factory('Mail', function($resource){
+angular.module('sycamoServices', ['ngResource'])
+  .factory('Mail', function($resource){
   	return $resource('mails/:mailId.json', {}, {
   		query: {method:'GET', params:{mailId:'mails'}, isArray:true}
   	});
-  });
+  })
+  .value('version', '0.1');;
