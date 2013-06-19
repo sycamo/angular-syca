@@ -13,14 +13,47 @@ angular.module('sycamoDirectives', [])
       elm.text(version);
     };
   }])
-  .directive('resizeImg', function(){
+  .directive('ngCarousel', function() {
+    return function(scope, elm, attrs) {
+      scope.$watch('mail', function() {
+        $(elm).carousel('pause');
+      });
+    } 
+  })
+
+
+  .directive('resizeImg', function($timeout){
   	return {
   		restrict: 'A',
   		link: function (scope, elm, attrs) {
   			var fullwidth = $(window).width();
-  			console.log("resizeImg is being used");
+        var fullheight = $(window).height();
 
-  			// elm.css('border','5px solid red').resizecrop({
+          $(elm).resizecrop({
+            width: 600,
+            height: 400,
+            vertical: "middle"
+          });
+
+  			// console.log("resizeImg is being used");
+        // console.log(elm[0].getAttribute('class'));
+
+        $timeout(function(){
+
+          console.log("after timeout!!!!");
+          console.log(elm);
+
+          // $(elm).resizecrop({
+          //   width: fullwidth*0.6,
+          //   height: fullheight*0.6,
+          //   vertical: "middle"
+          // });
+
+        }, 0);
+
+
+  			// elm.css('border','5px solid red');
+        // .resizecrop({
 	  		// 	width: fullwidth,
 	  		// 	height: 420,
 	  		// 	vertical: "top"
@@ -29,17 +62,6 @@ angular.module('sycamoDirectives', [])
 			}
   		
   	}
-  		// var fullwidth = $(window).width()
-  		// console.log(fullwidth);
-  		// console.log(angular.element(element).addClass('testclass'));
-  		
-  		// function(scope, element, attrs) {
-  		// element.css('border','5px solid red').resizecrop({
-  		// 	width: fullwidth,
-  		// 	height: 480,
-  		// 	vertical: "top"
-  		// });
-	
 
 
   });

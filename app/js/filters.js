@@ -19,7 +19,7 @@ angular.module('myFilters', []).
 	filter('truncate', function() {
 		return function (text, limit, end) {
 	        if (isNaN(limit))
-	            limit = 120;
+	            limit = 140;
 
 	        if (end === undefined)
 	            end = "...";

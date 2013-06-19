@@ -3,31 +3,24 @@
 
 /* Controllers */
 
-function MailListCtrl($scope, Mail) {
+function MailListCtrl($scope, Mail, $timeout) {
 	$scope.mails = Mail.query();
   $scope.orderProp = '-dateReceived';
 
 
-  $scope.$on('$viewContentLoaded', function(){
+  // $scope.$on('$viewContentLoaded', function(){
 
-  // 		var contentBlocks = $('#cover-page>div.row-fluid>div.cover-container>figure>div.prime');
+		// console.log("ContentLoaded");
+  //   console.log($('.prime'));
 
-  // 		var test = angular.element('#cover-page').addClass('dumb');
-  // 		var testBool = test.hasClass('dumb');
+  //   $timeout(function(){
 
-			// console.log(contentBlocks); // this is different from what i saw from chrome console
-			console.log("ContentLoaded");
-      console.log($('.prime'));
+  //     console.log("after timeout!!!!");
+  //     console.log($('.prime').attr('src'));
 
-      var fullwidth = $(window).width();
+  //   }, 10000);
 
-			// $('.prime').resizecrop({
-			// 	width:fullwidth,
-			// 	height:100,
-			// 	vertical:"top"
-			// });
-
-  });
+  // });
 
 }
 

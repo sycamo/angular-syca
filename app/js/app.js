@@ -23,7 +23,7 @@
 angular.module('sycamo', ['myFilters', 'sycamoServices', 'sycamoDirectives']).
   config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-      when('/mails', {templateUrl: 'partials/partial1.html', controller: MailListCtrl}).
+      when('/mails', {templateUrl: 'partials/listview.html', controller: MailListCtrl}).
       when('/mails/:mailId', {templateUrl: 'partials/partial2.html', controller: MailDetailCtrl}).
       otherwise({redirectTo: '/mails'});
 }]);

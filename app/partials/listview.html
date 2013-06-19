@@ -1,17 +1,18 @@
 
-<div id="cover-page" class="container-fluid">
+<div id="mailList-page" class="container-fluid">
   <div class="row-fluid">
     <!-- <div class="cover-container span12"> -->
+
     <div ng-class="{true:'cover-container', false:'small-container'}[$first]" class="span12" ng-repeat="mail in mails">
       <figure>
         <div ng-class="{true:'prime', false:'span4 smallthumb'}[$first]">
-          <img src="{{mail.thumbnail}}" resize-img>
+          <img src="{{mail.thumbnail}}" >
         </div>
-        <div ng-class="{true:'', false:'span8'}[$first]">
+        <div ng-class="{true:'covercap', false:'span8'}[$first]">
           <figcaption>
             <span class="label">COVER</span>
-            <h1>{{mail.title | truncate:70}}</h1>
-            <h3>{{mail.snippet  | truncate}} <span style="color: #d0d0d0;">/ {{mail.dateReceived*1000 | date:'medium'}}</span></h3>
+            <a href="#/mails/{{mail.filename}}"><h1>{{mail.title | truncate:70}}</h1></a>
+            <h3>{{mail.snippet  | truncate}} / <date>{{mail.dateReceived*1000 | date:'medium'}}</date></h3>
             <!-- <h3>{{mail.read | checkmark}}</h3> -->
           </figcaption>
         </div>

@@ -94,12 +94,14 @@ textarea {
    ========================================================================== */
 
 @color-blue: #1d9ee9;
+@color-green: rgb(108,198,85);
 @color-grey: #909090;
 @base-font-size: 16px;
 @default-font-color: #fff;
 @shadow-under: 0 0 30px 8px rgba(0,0,0,0.6);
 @shadow-right: 30px 0 60px 12px rgba(0,0,0,0.9);
-@shadow-menu:0 0 30px 4px rgba(29,158,217,0.3);
+// @shadow-menu:0 0 30px 4px rgba(29,158,217,0.3);
+@shadow-menu:0 0 30px 4px rgba(108,198,85,0.3);
 @placeholder-url: "http://placehold.it";
 @lorempix: "http://lorempixel.com";
 @header-height: 56px;
@@ -108,7 +110,8 @@ textarea {
 @s-logo-margin-left: 3%;
 @thumbnail-min-height: 240px;
 @thumbnail-col: 300px;
-
+@s-logo-path: "../images/logo-syca.png";
+@main-image-path: "../images/mainImage-spam.jpg";
 
 body {
     background: url('../images/brushed_gray.jpg') ;
@@ -118,12 +121,20 @@ body {
     line-height: @base-font-size + 2;
     text-decoration: none;
     font-family: "Helvetica Neue","Helvetica","Arial","sans-serif";
-    
+    // font-family: 'Yanone Kaffeesatz', sans-serif;
+
+}
+
+h1 {
+    font-family: 'Share Tech', sans-serif;
 }
 
 a {
     text-decoration: none;
     color: #fff;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 1em;
+
 }
 a:hover, a:active {
     text-decoration: none;
@@ -170,7 +181,8 @@ header:after {
         left: 0px;
         width: 138px;
         height: 40px;
-        background: url('@{placeholder-url}/138x40') no-repeat;
+        // background: url('@{placeholder-url}/138x40') no-repeat;
+        background: url('@{s-logo-path}') no-repeat;
         color: transparent;
 
         margin-left: @s-logo-margin-left;
@@ -181,6 +193,8 @@ header:after {
 
     li {
         line-height: @m-header-height;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+
     }
 }
 
@@ -223,11 +237,13 @@ header:after {
             box-shadow: @shadow-menu;
         
             a {
-                color: @color-blue;
+                // color: @color-blue;
+                color: @color-green;
             }
 
             hr {
-                color: @color-blue;
+                // color: @color-blue;
+                color: @color-green;
             }
 
         }
@@ -238,10 +254,6 @@ header:after {
         }
 
         li.sign-up {
-            // display: none; //mobile first
-        }
-
-        li.search {
             // display: none; //mobile first
         }
 
@@ -361,7 +373,7 @@ article {
             }
 
             h1 {
-                font-size: 1.2em;
+                font-size: 1.5em;
                 margin-bottom: 1em;
                 text-transform: uppercase;
             }
@@ -709,7 +721,7 @@ div.contact {
         }
 
         h1 {
-            font-size: 1.5em;
+            font-size: 2em;
             margin-bottom: 1.5em;
         }
 
@@ -740,7 +752,7 @@ div.contact {
         z-index: 0;
 
         div.poster-img {
-            background: url('@{lorempix}/1280/720') no-repeat;
+            background: url('@{main-image-path}') no-repeat;
             background-size: cover;
             width: 60%;
             height: 100%;
@@ -764,7 +776,7 @@ div.contact {
         }
 
         h1 {
-            font-size: 1.2em;
+            font-size: 2em;
             margin-bottom: 1.2em;
         }
 
@@ -818,7 +830,7 @@ div.contact {
         }
 
         h1 {
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 1.5em;
         }
 

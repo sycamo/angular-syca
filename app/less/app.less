@@ -1,9 +1,24 @@
 /* app css stylesheet */
 
+
+@color-green: rgb(108,198,85);
+@color-lime: #A3ECDA; 
+@color-hover-grey: #f6f6f6;
+
+
 body {
   padding-top: 20px;
 }
 
+h1 {
+    font-family: 'Share Tech', sans-serif;
+}
+
+date {
+  font-size: 1em;
+  color: @color-lime; //date green
+
+}
 
 .menu {
   list-style: none;
@@ -69,7 +84,9 @@ body {
   /*background: url('{{mainImageUrl}}') no-repeat;*/
   background: url('../mails/thumbnail/mail-001.jpg') no-repeat;
   background-size: cover;
-  margin: 0;
+  margin: 0 auto;
+  width: 95%;
+
 }
 
 .mailDetail figure img{
@@ -115,7 +132,7 @@ h1 {
   margin-top: 28px;
 }
 
-#cover-page {
+#mailList-page {
   padding: 0;
   background: white;
   color: black;
@@ -124,9 +141,9 @@ h1 {
     position: relative;
     margin: 0;
 
-    .prime img {
-      //width: 100%;
-      //max-height: 480px;
+    div.prime {
+      max-height: 420px;
+      overflow: hidden;
     }
 
     figcaption {
@@ -147,6 +164,7 @@ h1 {
         line-height: 1.2em;
       }
 
+
     }
   }
 
@@ -159,10 +177,17 @@ h1 {
       width: 100%;
       margin: 0;
 
+      div.smallthumb {
+        max-height: 130px;
+        overflow: hidden;
+        vertical-align: middle; 
+
+      }
+
       img {
-        // min-width: 120px;
+        // min-width: 150px;
         // min-height: 100px;
-        // width: 100%;
+        width: 100%;
         display: inline-block;
         float: left;
       }
@@ -174,11 +199,11 @@ h1 {
       figcaption {
         padding: 0 1em;
 
-
         h1 {
-          font-size: 1.2em;
-          line-height: 1.2em;
+          font-size: 1.1em;
+          line-height: 1.1em;
           margin: 0;
+          color: black;
         }
         h3 {
           font-weight: normal;
@@ -193,10 +218,139 @@ h1 {
   }
 
   .small-container:hover {
-    background: #f6f6f6;
+    background: @color-hover-grey;
 
   }
 
 
 }
 
+#detail-page {
+  background: url('../images/brushed_gray.jpg') ;
+
+  .container {
+    background: #eee;
+
+    .mailwrapper {
+
+    } 
+
+    .social {
+
+      padding-top: 3em;
+
+      ul{
+        list-style: none;
+        display: block;
+
+        li {
+          padding-top: 2em;
+        }
+      }
+    }
+  
+    .mailbody {
+      background: white;
+      color: black;
+      padding-top: 3em;
+      padding-left: 1em;
+
+      span {
+        font-size: 0.8em;
+        color: grey;
+      }
+
+
+
+    }
+
+  }
+  
+}
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+@media only screen and (min-width: 601px) {
+    /* Style adjustments for viewports that meet the condition */
+
+
+
+
+  #mailList-page>div>div.cover-container {
+    position: relative;
+    margin: 0;
+    padding: 1em 1em;
+
+    figure {
+      width: 100%;
+      margin: 0;
+
+      .prime {
+          width: 31.914893614%; // span4
+          display: block;
+          float: left;
+
+          max-height: 130px;
+          overflow: hidden;
+          vertical-align: middle; 
+      
+        img {
+          width: 100%;
+          display: inline-block;
+          float: left;
+        }
+      }
+
+      span.label {
+        display: none;
+      }
+      
+
+      .covercap {
+        width: 65.95744680199999%; // span8
+        margin-left: 2.127659574%;
+        display: block;
+        float: left;
+      }
+
+
+      figcaption {
+        position: static;
+        padding: 0 1em;
+        background: transparent;
+        color: black;
+
+        h1 {
+          font-size: 1.1em;
+          line-height: 1.1em;
+          margin: 0;
+          color: black;
+        }
+        h3 {
+          font-weight: normal;
+          font-size: 0.8em;
+          line-height: 1.2em;
+        }
+
+      }
+    }
+  }
+
+  .cover-container:hover {
+    background: @color-hover-grey;
+
+  }
+
+
+
+
+
+
+}
